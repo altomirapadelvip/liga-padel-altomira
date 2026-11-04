@@ -79,6 +79,7 @@ h2{margin:0;font-family:var(--display);font-weight:800;text-transform:uppercase;
   .par{font-size:2.6vw}.res{font-size:3.4vw}.res.pend{font-size:1.8vw}.pie{font-size:2vw}
 }
 :fullscreen #btnFull{display:none}
+[hidden]{display:none!important}
 .buscar{background:var(--panel);border:1px solid var(--rule);border-radius:22px;padding:clamp(12px,1.4vw,22px);backdrop-filter:blur(6px);display:flex;flex-direction:column;gap:10px;min-width:0}
 .buscar label{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:clamp(1.1rem,1.5vw,1.8rem)}
 .bq{display:flex;gap:8px;flex-wrap:wrap}
@@ -170,7 +171,7 @@ td.yo{background:repeating-linear-gradient(45deg,transparent 0 4px,rgba(255,255,
   <section class="bloque" aria-labelledby="norTit">
     <div class="cab"><strong id="norTit">Normas de la liga</strong><h2>Léelas antes de jugar</h2></div>
     <ol class="normas">
-      <li><b>8 jugadores por nivel</b><span>Nivel avanzado, nivel medio y nivel iniciación. Liga individual: cada jugador suma sus propios juegos.</span></li>
+      <li><b>8 jugadores</b><span>Una liga de nivel inicio-medio. Liga individual: cada jugador suma sus propios juegos.</span></li>
       <li><b>5 partidos obligatorios</b><span>Cada jugador tiene que jugar obligatoriamente 5 partidos, del 2 de noviembre al 21 de diciembre. Son de hora y media, con jugadores de tu mismo nivel, cuando y con quien quieras. Los que no juegues cuentan como 0 juegos.</span></li>
       <li><b>3 mini partidos en cada partido</b><span>Se rota la pareja: AB contra CD, AC contra BD y AD contra BC. Así juegas una vez con cada uno de los otros tres.</span></li>
       <li><b>10 juegos con punto de oro</b><span>Cada mini partido se juega a 10 juegos exactos (6-4, 7-3, 5-5…). En 40-40, punto de oro y elige el lado la pareja que resta. Empezad puntuales: son 30 juegos en hora y media.</span></li>
@@ -179,7 +180,7 @@ td.yo{background:repeating-linear-gradient(45deg,transparent 0 4px,rgba(255,255,
       <li><b>Mínimo 2 partidos antes del 30 de noviembre</b><span>Para que la liga avance a buen ritmo. Lo que no se juegue antes del 21 de diciembre no suma.</span></li>
       <li><b>Si alguien no se presenta</b><span>Pierde sus tres mini partidos 0-10 y los otros tres jugadores se llevan esos juegos.</span></li>
       <li><b>Clasificación</b><span>Manda el total de juegos ganados. Si hay empate: más mini partidos ganados y después mejor diferencia de juegos. Suben los 2 primeros y bajan los 2 últimos de cada nivel.</span></li>
-      <li><b>Partidos que no cumplan</b><span>Un partido que incumpla las normas no cuenta hasta que el club la revise. La decisión del club es final.</span></li>
+      <li><b>Partidos que no cumplan</b><span>Un partido que incumpla las normas no cuenta hasta que el club lo revise. La decisión del club es final.</span></li>
       <li><b>Cierre</b><span>22 y 23 de diciembre: clasificación final y anuncio de ascensos y descensos para la siguiente liga.</span></li>
     </ol>
   </section>
@@ -189,7 +190,7 @@ td.yo{background:repeating-linear-gradient(45deg,transparent 0 4px,rgba(255,255,
 </div>
 
 <script>
-const D={"liga": {"temporada": "Nov–Dic 2026", "plazo": "del 2 de noviembre al 21 de diciembre", "updated": "2026-10-21T13:35:00+02:00", "demo": false}, "reglas": {"partidos": 5, "suben": 2, "bajan": 2}, "divisiones": [{"id": "2", "nombre": "Nivel avanzado", "jugadores": []}, {"id": "3", "nombre": "Nivel medio", "jugadores": []}, {"id": "4", "nombre": "Nivel iniciación", "jugadores": []}], "partidos": []};
+const D={"liga": {"temporada": "Nov–Dic 2026", "plazo": "del 2 de noviembre al 21 de diciembre", "updated": "2026-11-04T10:30:00+01:00", "demo": false}, "reglas": {"partidos": 5, "suben": 2, "bajan": 2}, "divisiones": [{"id": "1", "nombre": "Nivel inicio-medio", "jugadores": ["Enrique H.", "Gustavo P.", "Jesús G.", "José Antonio M.", "José Miguel R.", "José Miguel M.", "Manuel J.", "Rubén M."]}], "partidos": []};
 const $=id=>document.getElementById(id);
 const h=(t,p,...k)=>{const e=document.createElement(t);Object.assign(e,p||{});k.flat().forEach(x=>x!=null&&e.append(x));return e};
 let di=0,pausa=0,yo=null;
